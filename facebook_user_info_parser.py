@@ -6,7 +6,7 @@ from time import sleep
 import sys
 
 
-url='upload.facebook.com'
+url='https://upload.facebook.com'
 headers={'User-Agent':'Mozilla/5.0'}
 
 r = requests.get(url)
@@ -37,7 +37,7 @@ def parse_user_info(user_fb_id):
  ### name and town
  # sleep 30 seconds for each step to prevent getting blocked by FB
  sleep(30)
- URL = "https://facebook.com/"+user_fb_id+"/about?section=living"
+ URL = "https://upload.facebook.com/"+user_fb_id+"/about?section=living"
  headers = Headers().generate()
  respond = s.get(URL,headers = headers, cookies=v_cookies)
  soupt = str(respond.content.decode('utf-8')).replace("<!--", "").replace("-->", "")
@@ -99,7 +99,7 @@ def parse_user_info(user_fb_id):
     ### employment and education
     # sleep 30 seconds for each step to prevent getting blocked by FB
     sleep(30)
-    URL = "https://facebook.com/"+user_fb_id+"?sk=about&section=education"
+    URL = "https://upload.facebook.com/"+user_fb_id+"?sk=about&section=education"
     headers = Headers().generate()
     respond = s.get(URL,headers = headers, cookies=v_cookies)
     #(soup.prettify())
@@ -156,7 +156,7 @@ def parse_user_info(user_fb_id):
     ### general info and address
     # sleep 30 seconds for each step to prevent getting blocked by FB
     sleep(30)
-    URL = "https://facebook.com/"+user_fb_id+"?sk=about&section=contact-info"
+    URL = "https://upload.facebook.com/"+user_fb_id+"?sk=about&section=contact-info"
     headers = Headers().generate()
     respond = s.get(URL,headers = headers, cookies=v_cookies)
     #(soup.prettify())
