@@ -6,7 +6,7 @@ from time import sleep
 import sys
 
 
-url='http://www.facebook.com'
+url='upload.facebook.com'
 headers={'User-Agent':'Mozilla/5.0'}
 
 r = requests.get(url)
@@ -26,8 +26,8 @@ load['email'] = v_email
 load['pass'] = v_password
 s=requests.session()
 # retrieve the cookie of the user you are using. Cookie name: presence
-cookies = {'presence': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx'}
-r=s.post(form.get('action'),data=load,headers=headers, cookies=cookies)
+v_cookies = {'presence': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx'}
+r=s.post(form.get('action'),data=load,headers=headers, cookies=v_cookies)
 
 ######
 # def 
@@ -39,7 +39,7 @@ def parse_user_info(user_fb_id):
  sleep(30)
  URL = "https://facebook.com/"+user_fb_id+"/about?section=living"
  headers = Headers().generate()
- respond = s.get(URL,headers = headers, cookies=cookies)
+ respond = s.get(URL,headers = headers, cookies=v_cookies)
  soupt = str(respond.content.decode('utf-8')).replace("<!--", "").replace("-->", "")
  soup = bs(soupt,"lxml")
 
@@ -101,7 +101,7 @@ def parse_user_info(user_fb_id):
     sleep(30)
     URL = "https://facebook.com/"+user_fb_id+"?sk=about&section=education"
     headers = Headers().generate()
-    respond = s.get(URL,headers = headers, cookies=cookies)
+    respond = s.get(URL,headers = headers, cookies=v_cookies)
     #(soup.prettify())
     soup = str(respond.content.decode('utf-8')).replace("<!--", "").replace("-->", "")
     soup = bs(soup,"lxml")
@@ -158,7 +158,7 @@ def parse_user_info(user_fb_id):
     sleep(30)
     URL = "https://facebook.com/"+user_fb_id+"?sk=about&section=contact-info"
     headers = Headers().generate()
-    respond = s.get(URL,headers = headers, cookies=cookies)
+    respond = s.get(URL,headers = headers, cookies=v_cookies)
     #(soup.prettify())
     soup = str(respond.content.decode('utf-8')).replace("<!--", "").replace("-->", "")
     soup = bs(soup,"lxml")
