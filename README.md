@@ -13,7 +13,7 @@ Prerequisites:
 
 
 Important:
-- This script is designed to work with Fecebook old version
+- This script is designed to work with Fecebook old version, so to make it works urrently you should modify the user-agent to make facebook thinks that you have an old browser
 - We advise you to use a FB account with at least of a 1-year life
 - Replace the v_email, v_password with your FB credentials
 - Retrive your local Facebok cookie called "presence" from your computer and past it to the v_cookies value
