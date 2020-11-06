@@ -13,6 +13,7 @@ Prerequisites:
 
 
 Important:
+- This script is designed to work with Fecebook old version 
 - We advise you to use a FB account with at least of a 1-year life
 - Replace the v_email, v_password with your FB credentials
 - If you have more than 100 accounts to proceed with, we advise creating several CSV input files with 100 records each file
