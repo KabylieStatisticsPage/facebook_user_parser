@@ -20,6 +20,8 @@ Important:
 - If you have more than 100 accounts to proceed with, we advise creating several CSV input files with 100 records each file
 - Note that there are 30 seconds of script sleeping per page
 - Note that there are 15 minutes of script sleeping per input file
+- Create a folder named "input" and put your inputs files in this folder
+- Create a folder named "output", the script will crate a CSV output files on  it
 - We noted that we can process between 8 and 13 CSV input files (100 x 8-13 records). Facebook may  block the account from users exploration
 - If you get blocked by Facebook regarding user details exploration, please wait for some hours to get unblocked
 - The extension of your input files have to be a ".csv" extension and encoded with UTF-8
